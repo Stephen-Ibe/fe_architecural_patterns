@@ -1,9 +1,9 @@
 "use client";
 
-import { store } from "@/store";
 import { MantineProvider } from "@mantine/core";
 import React, { ReactNode } from "react";
-import { Provider } from "react-redux";
+
+import StoreProvider from "./StoreProvider";
 
 type Props = {
   children: ReactNode;
@@ -11,9 +11,9 @@ type Props = {
 
 const Providers = ({ children }: Props) => {
   return (
-    <Provider store={store}>
+    <StoreProvider>
       <MantineProvider>{children}</MantineProvider>
-    </Provider>
+    </StoreProvider>
   );
 };
 
