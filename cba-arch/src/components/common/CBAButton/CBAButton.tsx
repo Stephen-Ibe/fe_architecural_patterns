@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@mantine/core";
 import { JSX, ReactNode } from "react";
 import { CBAButtonProps } from "./CBAButton.types";

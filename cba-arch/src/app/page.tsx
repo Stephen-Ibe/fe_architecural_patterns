@@ -1,3 +1,5 @@
+"use client";
+
 import { CBAButton } from "@/components";
 
 export default function Home() {
