@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
-import { Provider, Provider } from "react-redux";
+import { Provider } from "react-redux";
 import { store } from "@/store";
 
 const geistSans = Geist({
