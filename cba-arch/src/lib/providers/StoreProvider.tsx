@@ -7,7 +7,7 @@ type Props = {
 };
 
 const StoreProvider = ({ children }: Props) => {
-  const storeRef = React.useRef<AppStore>(undefined);
+  const storeRef = React.useRef<AppStore | null>(null);
   if (!storeRef.current) {
     storeRef.current = makeStore();
   }
