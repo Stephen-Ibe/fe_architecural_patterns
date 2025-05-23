@@ -1,6 +1,65 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Component-Based Architecture
+
+This is a simple application that uses the component-based architecture to display a list of users. The application is built using the following technologies:
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Mantine UI
+- TanStack Query
+- Redux Toolkit
+- Axios
+
+### Overview
+
+Component-Based Architecture is a software design pattern that structures an application into a collection of independent, reusable components. Each component represents a specific part of the user interface or functionality, and can be composed together to form more complex components.
+
+### Key Principles:
+
+1. **Single Responsibility**: Each component should have a single responsibility, and should not be responsible for multiple tasks.
+2. **Reusability**: Components should be reusable across the application, and should not be tied to a specific implementation.
+3. **Separation of Concerns**: Components should be separated by their concerns, and should not be tightly coupled.
+4. **Composability**: Components should be composed together to form more complex components.
+5. **Data Flow**: Data should flow from parent to child components, and should not be passed through multiple levels of components.
+
+### Best Practices:
+
+1. **Component Design**
+
+- Keep components small and focused on a single task
+- Use composition over inheritance
+- Implement proper prop validation
+- Consistent naming convention and folder structure
+- Document component APIs
+
+2. **State Management**
+
+- Keep state as close to where it's needed as possible
+- Use global state sparingly and only when necessary
+- Normalize complex state structures
+
+3. **Performance Optimization**
+
+- Use memoization and lazy loading
+- Use code splitting to load components only when needed (optimize bundle size and page load time)
+- Use server-side rendering when possible
+- Use caching to improve performance
+
+4. **Code Organization**
+
+- Group related components/files together
+- Use barrel exports to simplify imports
+- Maintain consistent folder structure
+- Separate concerns clearly (e.g. components, hooks, utils, etc.)
+
+## Summary
+
+This architecture provides a scalable and maintainable foundation for building large-scale web applications. By following the principles and best practices outlined in this document, developers can create high-quality, performant, and easy-to-maintain applications.
+
+## Running the application
 
 First, run the development server:
 
@@ -17,20 +76,3 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
