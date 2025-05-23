@@ -1,4 +1,8 @@
-import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
+import axios, {
+  AxiosError,
+  AxiosResponse,
+  InternalAxiosRequestConfig,
+} from "axios";
 import Client from "./client";
 
 const API_BASE_URL = "https://jsonplaceholder.typicode.com/";
@@ -20,6 +24,15 @@ instance.interceptors.request.use(
     return config;
   },
   (error: AxiosError): Promise<AxiosError> => {
+    return Promise.reject(error);
+  }
+);
+
+instance.interceptors.response.use(
+  async (response: AxiosResponse): Promise<AxiosResponse> => {
+    return Promise.resolve(response);
+  },
+  (error: AxiosError) => {
     return Promise.reject(error);
   }
 );

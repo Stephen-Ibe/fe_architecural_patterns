@@ -6,5 +6,5 @@ import { UserResponseData } from "@/lib/types";
  * @returns {UserResponseData}
  */
 export const getAllUsersApi = async (): Promise<UserResponseData[]> => {
-  return await clientOne.get<UserResponseData[]>("/users");
+  return await clientOne.get<UserResponseData[]>("users");
 };
