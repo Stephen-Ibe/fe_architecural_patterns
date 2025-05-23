@@ -4,6 +4,7 @@ import { MantineProvider } from "@mantine/core";
 import React, { ReactNode } from "react";
 
 import StoreProvider from "./StoreProvider";
+import QueryProvider from "./QueryProvider";
 
 type Props = {
   children: ReactNode;
@@ -12,7 +13,9 @@ type Props = {
 const Providers = ({ children }: Props) => {
   return (
     <StoreProvider>
-      <MantineProvider>{children}</MantineProvider>
+      <QueryProvider>
+        <MantineProvider>{children}</MantineProvider>
+      </QueryProvider>
     </StoreProvider>
   );
 };
