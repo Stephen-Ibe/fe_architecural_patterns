@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Component-Based Architecture
 
 This is a simple application that uses the component-based architecture to display a list of users. The application is built using the following technologies:
