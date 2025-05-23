@@ -3,7 +3,7 @@ import axios, {
   AxiosResponse,
   InternalAxiosRequestConfig,
 } from "axios";
-import Client from "./client";
+import ApiClient from "./api.client";
 
 const API_BASE_URL = "https://jsonplaceholder.typicode.com/";
 
@@ -37,6 +37,6 @@ instance.interceptors.response.use(
   }
 );
 
-export const clientOne = new Client(instance);
+export const clientOne = new ApiClient(instance);
 
 export default instance;

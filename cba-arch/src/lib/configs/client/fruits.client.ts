@@ -1,5 +1,9 @@
-import axios, { InternalAxiosRequestConfig, AxiosError } from "axios";
-import Client from "./client";
+import axios, {
+  InternalAxiosRequestConfig,
+  AxiosError,
+  AxiosResponse,
+} from "axios";
+import ApiClient from "./api.client";
 
 const FRUITS_API_BASE_URL = "https://www.fruityvice.com/api/fruit/";
 
@@ -24,6 +28,15 @@ fruitInstance.interceptors.request.use(
   }
 );
 
-export const fruitClient = new Client(fruitInstance);
+fruitInstance.interceptors.response.use(
+  async (response: AxiosResponse): Promise<AxiosResponse> => {
+    return Promise.resolve(response);
+  },
+  (error: AxiosError) => {
+    return Promise.reject(error);
+  }
+);
+
+export const fruitClient = new ApiClient(fruitInstance);
 
 export default fruitInstance;

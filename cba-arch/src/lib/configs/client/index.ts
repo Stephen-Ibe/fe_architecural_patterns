@@ -1,3 +1,2 @@
-export { default as ApiClient } from "./axios";
-export * from "./axios";
+export * from "./axios.client";
 export * from "./fruits.client";

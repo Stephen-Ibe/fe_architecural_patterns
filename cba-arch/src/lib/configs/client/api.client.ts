@@ -1,6 +1,6 @@
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
-export default class Client {
+export default class ApiClient {
   private axiosInstance: AxiosInstance;
 
   constructor(axiosInstance: AxiosInstance) {
@@ -28,9 +28,9 @@ export default class Client {
     return data;
   }
 
-  async put<T>(
+  async put<T, P = unknown>(
     url: string,
-    payload?: unknown,
+    payload?: P,
     options?: AxiosRequestConfig<unknown>
   ): Promise<T> {
     const { data }: AxiosResponse<T> = await this.axiosInstance.put(
