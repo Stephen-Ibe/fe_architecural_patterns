@@ -1,4 +1,5 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
+import Client from "./client";
 
 const API_BASE_URL = "https://jsonplaceholder.typicode.com/";
 
@@ -22,5 +23,7 @@ instance.interceptors.request.use(
     return Promise.reject(error);
   }
 );
+
+export const clientOne = new Client(instance);
 
 export default instance;
